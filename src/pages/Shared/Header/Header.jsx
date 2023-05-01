@@ -1,6 +1,7 @@
 import React from 'react';
 import { Container, Nav, Navbar } from 'react-bootstrap';
 import './Header.css';
+import { Link } from 'react-router-dom';
 
 
 const Header = () => {
@@ -10,7 +11,7 @@ const Header = () => {
         <Container>
           <Navbar.Brand href="#home">Cuisinett</Navbar.Brand>
           <Nav className="ms-auto gap-4 text-black">
-            <Nav.Link href="#home">Home</Nav.Link>
+            <Link to="/" href="#home">Home</Link>
             <Nav.Link href="#blog">Blog</Nav.Link>
             <Nav.Link href="#profile">Profile</Nav.Link>
           </Nav>
