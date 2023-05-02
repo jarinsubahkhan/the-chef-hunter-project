@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import Chef from '../Chef/Chef';
 
 
 
@@ -9,22 +10,22 @@ const Chefs = () => {
 useEffect(() => {
  fetch('http://localhost:5000/chefs')  
  .then(res => res.json())
- .then( data => console.log(data))
+ .then( data => setChefs(data))
  .catch(error => console.log(error)) 
 },[])
 
 
     return (
-        <div>
-      <h2>This is a chef  recipes page</h2>
-      <div>
+        <div className='mb-5'>
+      <div className='mb-5'>
       {
-chefs?.chefs?.map(chef => <p key={chef.id}>
-    {chef.name}
-</p>)
+chefs?.chefs?.map(chef => <Chef key={chef.id}
+chef={chef}
+></Chef>)
       }  
         
-        </div>      
+        </div>  
+
         </div>
     );
 };

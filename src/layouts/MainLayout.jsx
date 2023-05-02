@@ -4,6 +4,7 @@ import Header from '../pages/Shared/Header/Header';
 import { Container } from 'react-bootstrap';
 import Banner from '../pages/Home/Banner/Banner';
 import Chefs from '../pages/Home/Chefs/Chefs';
+import Section from '../pages/Home/Section/Section';
 
 const MainLayout = () => {
     return (
@@ -11,8 +12,9 @@ const MainLayout = () => {
         <Header></Header>
 
     <Banner></Banner>
-<Chefs></Chefs>
 
+<Chefs></Chefs>
+<Section></Section>
          <Footer></Footer> 
         </div>
     );

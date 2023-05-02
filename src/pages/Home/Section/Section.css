@@ -1,0 +1,17 @@
+.menu ul{
+    list-style: none;
+}
+.reviews ul{
+    list-style: none;
+}
+.restaurant{
+    background-color: beige;
+    padding: 40px;
+    border-radius: 10px;
+}
+.containers{
+    background-color: beige;
+    padding: 40px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
