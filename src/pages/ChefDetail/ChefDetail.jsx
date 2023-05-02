@@ -1,14 +1,38 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { useLoaderData } from 'react-router-dom';
 import './ChefDetail.css';
-import { Container } from 'react-bootstrap';
-
+import { Button, Container } from 'react-bootstrap';
+import { ToastContainer, toast } from 'react-toastify';
+import "react-toastify/dist/ReactToastify.css";
 
 const ChefDetail = () => {
+    
+
     const chef = useLoaderData();
     const {name,id,picture,
         experience,num_recipes,likes, bio, recipes} = chef;
         
+        const [favorite, setFavorite] = useState(false);
+        const [marked, setMarked] = useState(false);
+        const [added, setAdded] = useState(false);
+ 
+
+  const handleFavoriteClick = (event) => {
+        setFavorite(true)
+        toast("This recipe is your favorite!");
+  };
+  const handleMarkedClick = (event) => {
+        setMarked(true)
+        toast("This recipe is your favorite!");
+  };
+  const handleAddedClick = (event) => {
+        setAdded(true)
+        toast("This recipe is your favorite!");
+  };
+
+  
+
+
     return (
      <Container>
            <div className="banner-container">
@@ -30,6 +54,7 @@ const ChefDetail = () => {
           <div>
             <h6>Ingredients :</h6>
           <p className="card-text">{recipes[0].ingredients}</p>
+         
           </div>
 
           <div>
@@ -38,6 +63,14 @@ const ChefDetail = () => {
           </div>
           <p><small>Rating : {recipes[0].rating}</small></p>
         </div>
+        <Button
+        variant="dark"
+        onClick={handleFavoriteClick}
+        disabled={favorite}
+      >
+        Favorite
+      </Button>
+      <ToastContainer />
     </div>
 
       <div className="card">
@@ -55,6 +88,14 @@ const ChefDetail = () => {
           </div>
           <p><small>Rating : {recipes[1].rating}</small></p>
         </div>
+        <Button
+        variant="dark"
+        onClick={handleMarkedClick}
+        disabled={marked}
+      >
+        Favorite
+      </Button>
+      <ToastContainer />
     </div>
 
       <div className="card">
@@ -72,6 +113,14 @@ const ChefDetail = () => {
           </div>
           <p><small>Rating : {recipes[2].rating}</small></p>
         </div>
+        <Button
+        variant="dark"
+        onClick={handleAddedClick}
+        disabled={added}
+      >
+        Favorite
+      </Button>
+      <ToastContainer />
     </div>
 
       </div>
