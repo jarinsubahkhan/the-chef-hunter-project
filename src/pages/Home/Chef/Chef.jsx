@@ -1,6 +1,7 @@
 import React from 'react';
 import { Button, Card, Col, Container, Row } from 'react-bootstrap';
 import './Chef.css'
+import { Link } from 'react-router-dom';
 const Chef = ({chef}) => {
 
 const {name,id,picture,
@@ -19,7 +20,10 @@ experience,num_recipes,likes} = chef;
 <p>Number of recipes : {num_recipes}</p>
 <p><small>Likes : {likes}</small></p>
         </Card.Text>
+        <Link to={`/chefs/${id}`}>
         <Button className='mx-auto my-2 d-block' variant="dark">View Recipe</Button>
+        </Link>
+        
       </Card.Body>
     </Card>
           </Col>
