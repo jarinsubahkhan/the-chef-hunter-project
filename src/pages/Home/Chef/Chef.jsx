@@ -18,7 +18,7 @@ experience,num_recipes,likes} = chef;
         <Card.Text className='d-flex fw-normal fs-5 justify-content-evenly'>
 <p>Years of experience : {experience}</p>
 <p>Number of recipes : {num_recipes}</p>
-<p><small>Likes : {likes}</small></p>
+<p>Likes : {likes}</p>
         </Card.Text>
         <Link to={`/chefs/${id}`}>
         <Button className='mx-auto my-2 d-block' variant="dark">View Recipe</Button>

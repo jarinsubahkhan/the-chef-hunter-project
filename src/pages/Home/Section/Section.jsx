@@ -43,8 +43,8 @@ const Section = () => {
             <p>Our team of expert chefs have years of experience in the culinary industry. They use only the freshest and highest quality ingredients to create delicious and innovative dishes that will tantalize your taste buds.</p>
             <ul>
               <li>Chef John Smith - Specializes in French cuisine</li>
-              <li>Chef Sarah Johnson - Expert in Italian dishes</li>
-              <li>Chef Michael Lee - Masters in Asian fusion cuisine</li>
+              <li>Chef Anne-Sophie - Expert in french dishes</li>
+              <li>Chef Marco Pierre White  - Masters in french desert</li>
             </ul>
           </div>
           <div className="about-cleanliness">
