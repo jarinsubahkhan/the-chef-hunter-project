@@ -41,7 +41,6 @@ const Register = () => {
             const createdUser = result.user;
             console.log(createdUser);
             setRegError('')
-            setPassError('')
             // event.target.reset();
         })
         .catch(error =>{
