@@ -9,6 +9,7 @@ import Login from "../pages/Login/Login/Login";
 import Register from "../pages/Login/Register/Register";
 import RegisterLayout from "../layouts/RegisterLayout/RegisterLayout";
 import PrivateRoute from "./PrivateRoute";
+import NotFound from "../pages/NotFound/NotFound";
 
 
 const router = createBrowserRouter([
@@ -52,6 +53,10 @@ children: [
                   element: <PrivateRoute><ChefDetail></ChefDetail></PrivateRoute>,
                loader: ({params}) => fetch(`http://localhost:5000/chefs/${params.id}`)
              },
+             {
+                path: '*',
+                element: <NotFound></NotFound>
+             }
          ]
     },
 ])
