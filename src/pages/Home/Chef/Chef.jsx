@@ -1,18 +1,21 @@
-import React from 'react';
+
 import { Button, Card, Col, Container, Row } from 'react-bootstrap';
 import './Chef.css'
 import { Link } from 'react-router-dom';
+
 const Chef = ({chef}) => {
 
 const {name,id,picture,
 experience,num_recipes,likes} = chef;
 
+
     return (
         <Container>
+            
         <Row className='mb-4 mt-5'>
           <Col>
           <Card className='card' style={{ width: '68rem' }}>
-      <Card.Img variant="top" src={picture} className='img-fluid w-50 rounded mx-auto d-block my-3' />
+      <Card.Img variant="top" src={picture} className='img-fluid w-50 rounded mx-auto d-block my-3 lazy-img' loading='' />
       <Card.Body>
         <Card.Title className='text-center mb-4 fw-semibold fs-2'>{name}</Card.Title>
         <Card.Text className='d-flex fw-normal fs-5 justify-content-evenly'>

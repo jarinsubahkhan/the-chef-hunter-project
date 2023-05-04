@@ -4,6 +4,7 @@ import './ChefDetail.css';
 import { Button, Container } from 'react-bootstrap';
 import { ToastContainer, toast } from 'react-toastify';
 import "react-toastify/dist/ReactToastify.css";
+import LazyLoad from 'react-lazy-load';
 
 const ChefDetail = () => {
     
@@ -37,7 +38,11 @@ const ChefDetail = () => {
      <Container>
            <div className="banner-container">
   <div className="chef-info">
-    <img src={picture} alt="Chef Name" className="chef-picture" />
+    <div>
+        <LazyLoad onContentVisible={() => {console.log('loaded!')}}>
+        <img src={picture} alt="Chef Name" className="chef-picture" />
+        </LazyLoad>
+    </div>
     <h2 className="chef-name">{name}</h2>
     <p className="chef-bio">BIO : {bio}</p>
     <p className="chef-likes">LIKES : {likes}</p>
