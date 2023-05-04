@@ -23,7 +23,7 @@ const handleLogout = () => {
           <Navbar.Brand className='fw-bolder fs-3' href="#home">Cuisinett</Navbar.Brand>
           <Nav className="ms-auto gap-4 text-black text-decoration-none">
             <ActiveLink to="/" href="#home">Home</ActiveLink>
-            <ActiveLink href="#blog">Blog</ActiveLink>
+            <ActiveLink to="/blog" href="#blog">Blog</ActiveLink>
             <ActiveLink className='profile-link' href="">
                  {
                     user ?

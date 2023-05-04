@@ -10,6 +10,7 @@ import Register from "../pages/Login/Register/Register";
 import RegisterLayout from "../layouts/RegisterLayout/RegisterLayout";
 import PrivateRoute from "./PrivateRoute";
 import NotFound from "../pages/NotFound/NotFound";
+import Blog from "../pages/Blog/Blog";
 
 
 const router = createBrowserRouter([
@@ -56,6 +57,10 @@ children: [
              {
                 path: '*',
                 element: <NotFound></NotFound>
+             },
+             {
+                path: '/blog',
+                element : <Blog></Blog>,
              }
          ]
     },
