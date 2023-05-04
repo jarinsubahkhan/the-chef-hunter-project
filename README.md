@@ -15,3 +15,4 @@ This project is a chef website that provides users with a variety of recipes, co
 - User Accounts: The website allows users to create accounts and log in to save their favorite recipes, and know about some recipes.
 
 ### **Live-Site Link** 
+file:///C:/projects/the-chef-recipe-assignment/README.html
