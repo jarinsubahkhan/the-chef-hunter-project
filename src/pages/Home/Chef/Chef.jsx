@@ -2,6 +2,7 @@
 import { Button, Card, Col, Container, Row } from 'react-bootstrap';
 import './Chef.css'
 import { Link } from 'react-router-dom';
+import { FaHeart } from 'react-icons/fa';
 
 const Chef = ({chef}) => {
 
@@ -19,9 +20,9 @@ experience,num_recipes,likes} = chef;
       <Card.Body>
         <Card.Title className='text-center mb-4 fw-semibold fs-2'>{name}</Card.Title>
         <Card.Text className='d-flex fw-normal fs-5 justify-content-evenly'>
-<p>Years of experience : {experience}</p>
+<p>Years of experience : {experience}y</p>
 <p>Number of recipes : {num_recipes}</p>
-<p>Likes : {likes}</p>
+<p> <FaHeart></FaHeart> {likes}</p>
         </Card.Text>
         <Link to={`/chefs/${id}`}>
         <Button className='mx-auto my-2 d-block' variant="dark">View Recipe</Button>

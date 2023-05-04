@@ -5,6 +5,8 @@ import { Button, Container } from 'react-bootstrap';
 import { ToastContainer, toast } from 'react-toastify';
 import "react-toastify/dist/ReactToastify.css";
 import LazyLoad from 'react-lazy-load';
+import { Rating } from '@smastrom/react-rating';
+import '@smastrom/react-rating/style.css'
 
 const ChefDetail = () => {
     
@@ -66,7 +68,11 @@ const ChefDetail = () => {
             <h6>Cooking Method :</h6>
           <p className="card-text">{recipes[0].cooking_method}</p>
           </div>
-          <p><small>Rating : {recipes[0].rating}</small></p>
+          <div className='flex-grow-1 d-flex align-items-center'>
+                <Rating style={{ maxWidth: 90 }} value={(recipes[0].rating)} readOnly />
+                    <span className='ms-2'>{recipes[0].rating}</span>
+                </div>
+          {/* <p><small>Rating : {recipes[0].rating}</small></p> */}
         </div>
         <Button
         variant="dark"
@@ -91,7 +97,11 @@ const ChefDetail = () => {
             <h6>Cooking Method :</h6>
           <p className="card-text">{recipes[1].cooking_method}</p>
           </div>
-          <p><small>Rating : {recipes[1].rating}</small></p>
+          <div className='flex-grow-1 d-flex align-items-center'>
+                <Rating style={{ maxWidth: 90 }} value={(recipes[1].rating)} readOnly />
+                    <span className='ms-2'>{recipes[1].rating}</span>
+                </div>
+          {/* <p><small>Rating : {recipes[1].rating}</small></p> */}
         </div>
         <Button
         variant="dark"
@@ -116,7 +126,11 @@ const ChefDetail = () => {
             <h6>Cooking Method :</h6>
           <p className="card-text">{recipes[2].cooking_method}</p>
           </div>
-          <p><small>Rating : {recipes[2].rating}</small></p>
+          <div className='flex-grow-1 d-flex align-items-center'>
+                <Rating style={{ maxWidth: 90 }} value={(recipes[2].rating)} readOnly />
+                    <span className='ms-2'>{recipes[2].rating}</span>
+                </div>
+          {/* <p><small>Rating : {recipes[2].rating}</small></p> */}
         </div>
         <Button
         variant="dark"

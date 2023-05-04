@@ -52,7 +52,7 @@ children: [
              {
                   path: '/chefs/:id',
                   element: <PrivateRoute><ChefDetail></ChefDetail></PrivateRoute>,
-               loader: ({params}) => fetch(`http://localhost:5000/chefs/${params.id}`)
+               loader: ({params}) => fetch(`https://the-chef-recipe-server-jarinsubahkhan.vercel.app/chefs/${params.id}`)
              },
              {
                 path: '*',
